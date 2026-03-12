@@ -5,7 +5,7 @@ from app.database.database import Base, engine
 from app.models import user_model, admin_model, salon_model, barber_model, slot_model, booking_model
 
 # import routers
-from app.routers import user_router, admin_router, barber_router, booking_router
+from app.routers import user_router, admin_router, barber_router, booking_router,service_router
 
 app = FastAPI()
 
@@ -16,3 +16,4 @@ app.include_router(user_router.router)
 app.include_router(admin_router.router)
 app.include_router(barber_router.router)
 app.include_router(booking_router.router)
+app.include_router(service_router.router)

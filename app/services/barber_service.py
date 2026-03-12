@@ -32,7 +32,7 @@ def update_barber(db, barber_id: int, barber):
     existing_barber.name = barber.name
     existing_barber.phone = barber.phone
     existing_barber.specialization = barber.specialization
-
+    existing_barber.password = barber.password
     db.commit()
     db.refresh(existing_barber)
 
